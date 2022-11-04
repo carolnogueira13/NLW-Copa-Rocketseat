@@ -1,0 +1,84 @@
+/* Seletor universal para retirar os espaços do site*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* O tamanho da caixa será definido pela borda, o padding não irá aumentar o tamanho da caixa*/
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121214;
+  background-image: url(assets/bg.svg);
+  background-position-x: center ;
+  background-position-y: 55.6% ;
+}
+
+#app {
+  width: fit-content;
+  margin: 52px auto;
+}
+
+header{
+  margin-bottom: 63px;
+}
+
+.card {
+  padding: 32px 23px;
+  text-align: center;
+  background: #1D1C19;
+  border-bottom: 2px solid #F7DD43; /* Border-bottom - borda de baixo*/
+  border-radius: 6px; /* Arredondamento de borda de 6px*/
+  
+}
+
+.card h2{
+  color: #F7DD43;
+  display: flex;
+  gap: 16px; /* Espaço entre os elementos filhos de 16 px*/
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid #746615;
+  border-radius: 6px;
+  width: fit-content;
+  margin-inline: auto;
+  margin-bottom: 53px;
+}
+
+.card h2 span{
+  color: #E1E1E6;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.card ul{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 270px;
+}
+
+.card ul li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 22px;
+  
+}
+
+/* Diz respeito a uma li que tenha uma li antes */
+.card ul li + li{
+  padding-top: 24px;
+  border-top: 1px solid #323228;
+}
+
+.card ul li strong {
+  font-weight: 900;
+  color: #E1E1E6;
+  font-size: 36px;
+  line-height: 125%;
+}
