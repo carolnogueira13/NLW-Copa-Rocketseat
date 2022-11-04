@@ -1,3 +1,4 @@
+// Função para criar um no jogo no card
 function createGame(player1, hour, player2){
   return `
   <li>
@@ -8,10 +9,13 @@ function createGame(player1, hour, player2){
   `
 }
 
+// Função para criar um card 
+let delay = -0.4; //Criar essa variavel delay para que a animação tenha um delay entre os cards
 function createCard(date,day, games){ 
+  delay = delay + 0.4; 
   return `
-  <div class="card">
-    <h2>${date} <span>${day}</span></h2> <!--span é uma tag para que possa ter a diferenciação entre o conteúdo de data e do dia da semana-->
+  <div class="card" style="animation-delay: ${delay}s">
+    <h2>${date} <span>${day}</span></h2>
     <ul>
       ${games}
     </ul>
@@ -20,22 +24,17 @@ function createCard(date,day, games){
 
 }
 
-document.querySelector("#app").innerHTML = `
-<header>
-    <img src="assets/logo.svg" alt="Logo da NLW">
-</header>
+/* document é o objeto para o documento
+querySelector - Para selecionar um seletor nesse caso o #cards 
+innerHTML - Para inserir esse comando no seletor do HTML selecionado */
 
-<main id="cards">
-  ${createCard(
+document.querySelector("#cards").innerHTML =
+  createCard(
     "24/11",
     "quinta",
-    createGame("brazil", "16:00", "serbia") + createGame("brazil", "16:00", "serbia"))}
-  ${createCard(
-    "28/11",
-    "segunda",
-    createGame("brazil", "13:00", "switzerland")
-  )}
-  ${createCard("02/12", "sexta", createGame("brazil", "16:00", "cameroon"))}
-   
-</main>
-`
+    createGame("brazil", "16:00", "serbia") +
+      createGame("brazil", "16:00", "serbia")
+  ) +
+  createCard("28/11", "segunda", createGame("brazil", "13:00", "switzerland")) +
+  createCard("02/12", "sexta", createGame("brazil", "16:00", "cameroon")) 
+  

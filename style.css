@@ -39,6 +39,7 @@ header{
   background: #1D1C19;
   border-bottom: 2px solid #F7DD43; /* Border-bottom - borda de baixo*/
   border-radius: 6px; /* Arredondamento de borda de 6px*/
+  animation: appear 0.2s; /* Adicionando a animação no card*/
   
 }
 
@@ -88,4 +89,38 @@ header{
   color: #E1E1E6;
   font-size: 36px;
   line-height: 125%;
+}
+
+/* A vírgula nesse caso é para dizer que esses dois seletores irão receber a mesma propriedade */
+.card h2:hover,
+.card ul li strong:hover,
+.card ul li img:hover {
+  transform: scale(1.1) ;
+
+}
+
+.card h2,
+.card ul li strong,
+.card ul li  {
+  transition: transform 0.3s;
+}
+
+/* Criando uma animação*/
+@keyframes appear {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* A partir de 700 px irá aplicar essas configurações*/
+@media (min-width: 700px){
+  #cards {
+    max-width: 670px;
+    flex-direction: row;
+    flex-wrap: wrap; /*Quando seja a largura máxima o próximo conteudi irá para baixo*/
+  }
 }
