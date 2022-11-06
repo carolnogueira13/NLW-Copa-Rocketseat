@@ -35,7 +35,6 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #121224;
   background-image: var(--body-bg-image);
-  background-position-y: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -157,10 +156,6 @@ footer{
     flex-direction: row;
     flex-wrap: wrap; /*Quando seja a largura máxima o próximo conteudi irá para baixo*/
   }
-  body{
-    background-position-x: right;
-  }
-
 }
 
 @media (min-width: 1024px){
@@ -168,8 +163,5 @@ footer{
     max-width: 1020px;
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  body{
-    background-position-x: right;
   }
 }
