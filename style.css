@@ -35,7 +35,6 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #121224;
   background-image: var(--body-bg-image);
-  background-position-x: top;
   background-position-y: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -103,6 +102,12 @@ header{
   
 }
 
+.card ul li span{
+  color: #E1E1E6;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 /* Diz respeito a uma li que tenha uma li antes */
 .card ul li + li{
   padding-top: 24px;
@@ -151,5 +156,20 @@ footer{
     max-width: 670px;
     flex-direction: row;
     flex-wrap: wrap; /*Quando seja a largura máxima o próximo conteudi irá para baixo*/
+  }
+  body{
+    background-position-x: right;
+  }
+
+}
+
+@media (min-width: 1024px){
+  #cards {
+    max-width: 1020px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  body{
+    background-position-x: right;
   }
 }
